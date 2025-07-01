@@ -1,0 +1,149 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.auth-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('https://assets.nflxext.com/ffe/siteui/vlv3/d282a426-b01a-424c-9740-30342f3652fb/31d296c6-b4c0-4eb1-959f-1c77b2e13e59/US-en-20230626-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  padding: 0 20px;
+}
+
+.auth-card {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 60px 68px 40px;
+  backdrop-filter: blur(10px);
+}
+
+.auth-card h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form .form-group {
+  margin-bottom: 0;
+}
+
+.auth-form .form-control {
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 50px;
+  height: 50px;
+}
+
+.auth-form .form-control:focus {
+  background-color: #454545;
+  outline: none;
+}
+
+.auth-form .form-control::placeholder {
+  color: #8c8c8c;
+}
+
+.auth-submit {
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background-color: #f40612;
+}
+
+.auth-submit:disabled {
+  background-color: #8c8c8c;
+  cursor: not-allowed;
+}
+
+.auth-links {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.auth-links p {
+  color: #737373;
+  font-size: 16px;
+  margin: 0;
+}
+
+.auth-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background-color: #e87c03;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 40px 28px;
+    margin: 0 5%;
+  }
+  
+  .auth-card h1 {
+    font-size: 28px;
+  }
+  
+  .auth-form .form-control {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  
+  .auth-submit {
+    font-size: 14px;
+    padding: 14px;
+  }
+}

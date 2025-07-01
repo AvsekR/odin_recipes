@@ -1,0 +1,182 @@
+.profile {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.profile-header {
+  margin-bottom: 40px;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.profile-header p {
+  font-size: 1.1rem;
+  color: #999;
+  margin: 0;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.profile-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-form .form-group {
+  margin-bottom: 0;
+}
+
+.profile-form label {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.profile-form .form-control {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.profile-form .form-control:focus {
+  border-color: #e50914;
+  background-color: #404040;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #46d369;
+  color: #fff;
+}
+
+.message.error {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.subscription-info {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.subscription-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.subscription-plans {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plan {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.plan:hover {
+  border-color: #e50914;
+}
+
+.plan h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #e50914;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan li {
+  padding: 4px 0;
+  color: #fff;
+  position: relative;
+  padding-left: 20px;
+}
+
+.plan li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #46d369;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .profile {
+    padding-top: 90px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .profile-card,
+  .subscription-info {
+    padding: 20px;
+  }
+  
+  .subscription-plans {
+    gap: 15px;
+  }
+  
+  .plan {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-card,
+  .subscription-info {
+    padding: 15px;
+  }
+  
+  .profile-form {
+    gap: 15px;
+  }
+}
