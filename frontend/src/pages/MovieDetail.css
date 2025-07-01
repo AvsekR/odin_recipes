@@ -1,0 +1,305 @@
+.movie-detail {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.back-button {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+}
+
+.video-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.backdrop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #b20710;
+  transform: scale(1.05);
+}
+
+.movie-info {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    #000 20%
+  );
+  padding: 40px 0;
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-header {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.movie-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.movie-year,
+.movie-rating,
+.movie-duration,
+.movie-category {
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.movie-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 24px;
+  max-width: 80%;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.like-btn:hover {
+  border-color: #0080ff;
+  color: #0080ff;
+}
+
+.dislike-btn:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.movie-poster {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details {
+  display: grid;
+  gap: 40px;
+}
+
+.detail-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 16px;
+  color: #fff;
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.cast-item {
+  padding: 12px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.actor-name {
+  display: block;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.character-name {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .movie-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .movie-title {
+    font-size: 2.2rem;
+  }
+  
+  .movie-description {
+    max-width: 100%;
+  }
+  
+  .movie-actions {
+    justify-content: center;
+  }
+  
+  .action-btn {
+    min-width: 120px;
+    padding: 10px 16px;
+  }
+  
+  .movie-poster {
+    order: -1;
+  }
+  
+  .movie-poster img {
+    max-width: 250px;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cast-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .back-button {
+    top: 90px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-title {
+    font-size: 1.8rem;
+  }
+  
+  .movie-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .movie-description {
+    font-size: 1rem;
+  }
+  
+  .play-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  
+  .movie-info {
+    padding: 20px 0;
+  }
+}
